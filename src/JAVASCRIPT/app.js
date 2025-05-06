@@ -1,6 +1,6 @@
-let fullName = prompt("What Is Your Full Name?", "");
-let upperCaseFullName = fullName.toUpperCase();
-alert(`Welcome To Enayon Sublime Design ${upperCaseFullName}`);
+// let fullName = prompt("What Is Your Full Name?", "");
+// let upperCaseFullName = fullName.toUpperCase();
+// alert(`Welcome To Enayon Sublime Design ${upperCaseFullName}`);
 
 // Mobile menu functionality
 const mobileMenuButton = document.getElementById('mobile-menu-button');

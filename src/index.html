@@ -11,23 +11,30 @@
       href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome CDN -->
+    
     <!-- CSS -->
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
     <header>
+      
       <div
         class="bg-slate-200 mx-auto px-4 py-3 shadow-md shadow-black/30 lg:py-4 lg:px-10"
       >
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div>
-            <a href="index.html" class="flex items-center uppercase">
-              <span class="inline-block font-bold italic text-2xl"
-                ><span class="text-4xl">E</span>nayon</span
-              ><br />
-              <span class="text-lg">Sublime Design</span>
+            <a href="index.html" class="uppercase flex items-center gap-2 lg:gap-4">
+
+              <img src="./assets/enayon_logo.png" alt="Enayon Sublime Design" srcset="">
+              <div>
+                <span class="inline-block font-bold italic text-2xl"
+                  ><span class="text-4xl">E</span>nayon</span
+                ><br />
+             <span class="text-lg">Sublime Design</span>
+              </div>
             </a>
           </div>
 
@@ -36,7 +43,9 @@
             <!-- Mobile Menu Button -->
             <button
               id="mobile-menu-button"
-              class="md:hidden p-2 rounded-lg hover:bg-slate-300 focus:outline-none"
+              class=" p-2 rounded-lg hover:bg-slate-300 focus:outline-none 
+              hover:shadow-lg hover:shadow-black/30 hover:transition-all 
+              hover:duration-700 hover:ease-in-out hover:scale-110 hover:text-white md:hidden"
               aria-label="Toggle mobile menu"
             >
               <svg
