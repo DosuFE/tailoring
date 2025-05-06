@@ -1,11 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enayon Sublime Design</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <!-- Header -->
+    <header>
+      <div
+        class="bg-slate-200 mx-auto px-4 py-3 shadow-md shadow-black/30 lg:py-4 lg:px-10"
+      >
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div>
+            <a href="index.html" class="flex items-center uppercase">
+              <span class="inline-block font-bold italic text-2xl"
+                ><span class="text-4xl">E</span>nayon</span
+              ><br />
+              <span class="text-lg">Sublime Design</span>
+            </a>
+          </div>
+
+          <!-- Navigation Menu -->
+          <nav class="relative">
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden p-2 rounded-lg hover:bg-slate-300 focus:outline-none"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Desktop Navigation Links -->
+            <ul
+              id="nav-menu"
+              class="hidden text-xl font-semibold md:flex items-center space-x-8"
+            >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                >Kaftan</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                >Agbada</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                >About</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                >FAQ</a
+              >
+            </ul>
+
+            <!-- Mobile Navigation Menu -->
+            <div
+              id="mobile-menu"
+              class="hidden md:hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Kaftan</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Agbada</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >About</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >FAQ</a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scroll-to-top"
+      class="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
+      aria-label="Scroll to top"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- Scrolling Text Banner -->
+    <div class="relative overflow-hidden bg-black/50 h-12">
+      <div
+        class="absolute whitespace-nowrap text-white text-lg font-semibold"
+        style="animation: marquee 30s linear infinite; will-change: transform"
+      >
+        Welcome to Enayon Sublime Design! Discover our Kaftan and Agbada
+        collections. Our Official Store is now open! - 8, Huyon Street, Off
+        Apasa Road, Ajido, Badagry, Lagos State.
+      </div>
+    </div>
+
+    <!-- Hero Background Slider -->
+    <section
+      class="relative w-full h-[60vh] md:h-[85vh] flex items-center justify-center overflow-hidden"
+      id="hero-slider"
+    >
+      <!-- Slides -->
+      <div
+        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover"
+        id="slide-0"
+      ></div>
+      <div
+        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover opacity-0"
+        id="slide-1"
+      ></div>
+      <div
+        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover opacity-0"
+        id="slide-2"
+      ></div>
+      <div
+        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover opacity-0"
+        id="slide-3"
+      ></div>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center text-white">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">
+          Welcome to Enayon Sublime Design
+        </h1>
+        <p class="text-lg md:text-2xl">
+          Discover our Kaftan and Agbada collections
+        </p>
+      </div>
+
+      <!-- Controls -->
+      <button
+        id="prev-slide"
+        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full"
+        aria-label="Previous slide"
+      >
+        &#8592;
+      </button>
+      <button
+        id="next-slide"
+        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full"
+        aria-label="Next slide"
+      >
+        &#8594;
+      </button>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="./JAVASCRIPT/app.js"></script>
   </body>
 </html>
