@@ -27,51 +27,43 @@ scrollToTopButton.addEventListener('click', () => {
     });
 });
 
-// Hero Slider
-
-const images = [
-    "https://ik.imagekit.io/derf9ry7bk/Grandeur/Photos/home/hero-desktop.jpg", // New first image
-    "https://wp-media-dejiandkola.s3.eu-west-2.amazonaws.com/2021/08/228013867_226535282691755_7723897417864312630_n.jpg",
-    "https://wp-media-dejiandkola.s3.eu-west-2.amazonaws.com/2021/07/221010174_514682686473681_3806229032056508721_n.jpg",
-    "https://wp-media-dejiandkola.s3.eu-west-2.amazonaws.com/2025/02/165706373_351484026244111_1730607163972531344_n.jpg"
+// Hero Background Image Slider
+const bgImages = [
+    './assets/banner_1.jpg',
+    './assets/banner_2.jpg',
+    './assets/agbada_3.jpg'
   ];
-
-let current = 0;
-const slides = images.map((_img, i) => document.getElementById(`slide-${i}`));
-slides.forEach((slide, i) => {
-  slide.style.backgroundImage = `url('${images[i]}')`;
-});
-
-function showSlide(idx) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('opacity-0', i !== idx);
-    slide.classList.toggle('opacity-100', i === idx);
+  
+  let bgIndex = 0;
+  const heroSection = document.getElementById('hero-bg-slider');
+  const dots = document.querySelectorAll('.bg-dot');
+  
+  function setBgSlide(index) {
+    bgIndex = index;
+    heroSection.style.backgroundImage = `url('${bgImages[bgIndex]}')`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-blue-600', i === bgIndex);
+      dot.classList.toggle('bg-gray-400', i !== bgIndex);
+    });
+  }
+  
+  // Button events
+  document.getElementById('bg-prev').onclick = () => {
+    setBgSlide((bgIndex - 1 + bgImages.length) % bgImages.length);
+  };
+  document.getElementById('bg-next').onclick = () => {
+    setBgSlide((bgIndex + 1) % bgImages.length);
+  };
+  // Dot events
+  dots.forEach((dot, i) => {
+    dot.onclick = () => setBgSlide(i);
   });
-}
+  
+  // Auto-slide
+  setInterval(() => {
+    setBgSlide((bgIndex + 1) % bgImages.length);
+  }, 5000);
+  
+  // Initialize
+  setBgSlide(0);
 
-document.getElementById('prev-slide').onclick = () => {
-  current = (current - 1 + images.length) % images.length;
-  showSlide(current);
-};
-document.getElementById('next-slide').onclick = () => {
-  current = (current + 1) % images.length;
-  showSlide(current);
-};
-
-// Optional: Auto-slide every 7 seconds
-let autoSlide = setInterval(() => {
-  current = (current + 1) % images.length;
-  showSlide(current);
-}, 7000);
-
-// Pause auto-slide on hover
-document.getElementById('hero-slider').addEventListener('mouseenter', () => clearInterval(autoSlide));
-document.getElementById('hero-slider').addEventListener('mouseleave', () => {
-  autoSlide = setInterval(() => {
-    current = (current + 1) % images.length;
-    showSlide(current);
-  }, 7000);
-});
-
-// Initialize
-showSlide(current);

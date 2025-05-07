@@ -7,3 +7,13 @@ header {
   0%   { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
+
+#hero-bg-slider {
+  transition: background-image 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+#kaftans h2 {
+  font-family: "Cinzel", serif;
+}

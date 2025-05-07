@@ -12,40 +12,57 @@
       rel="stylesheet"
     />
     <!-- Font Awesome CDN -->
-    
+
     <!-- CSS -->
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
-    <header>
-      
+    <header class="fixed top-0 w-full z-50">
+      <!-- Scrolling Text Banner -->
+      <div class="bg-black/85 h-12">
+        <div
+          class="whitespace-nowrap text-white text-lg font-semibold"
+          style="animation: marquee 30s linear infinite; will-change: transform"
+        >
+          Welcome to Enayon Sublime Design! Discover our Kaftan and Agbada
+          collections. Our Official Store is now open! - 8, Huyon Street, Off
+          Apasa Road, Ajido, Badagry, Lagos State.
+        </div>
+      </div>
+
       <div
-        class="bg-slate-200 mx-auto px-4 py-3 shadow-md shadow-black/30 lg:py-4 lg:px-10"
+        class="bg-slate-200 mx-auto px-4 py-3 shadow-md shadow-black/30 lg:px-10"
       >
+        <!-- BRAND LOGO -->
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div>
-            <a href="index.html" class="uppercase flex items-center gap-2 lg:gap-4">
-
-              <img src="./assets/enayon_logo.png" alt="Enayon Sublime Design" srcset="">
+            <a
+              href="index.html"
+              class="uppercase flex items-center gap-2 lg:gap-4"
+            >
+              <img
+                src="./assets/enayon_logo.png"
+                alt="Enayon Sublime Design"
+                srcset=""
+              />
               <div>
                 <span class="inline-block font-bold italic text-2xl"
                   ><span class="text-4xl">E</span>nayon</span
                 ><br />
-             <span class="text-lg">Sublime Design</span>
+                <span class="text-lg">Sublime Design</span>
               </div>
             </a>
           </div>
+          <!-- END OF BRAND LOGO -->
 
           <!-- Navigation Menu -->
           <nav class="relative">
             <!-- Mobile Menu Button -->
             <button
               id="mobile-menu-button"
-              class=" p-2 rounded-lg hover:bg-slate-300 focus:outline-none 
-              hover:shadow-lg hover:shadow-black/30 hover:transition-all 
-              hover:duration-700 hover:ease-in-out hover:scale-110 hover:text-white md:hidden"
+              class="p-2 rounded-lg hover:bg-slate-300 focus:outline-none hover:shadow-lg hover:shadow-black/30 hover:transition-all hover:duration-700 hover:ease-in-out hover:scale-110 hover:text-white md:hidden"
               aria-label="Toggle mobile menu"
             >
               <svg
@@ -69,33 +86,33 @@
               class="hidden text-xl font-semibold md:flex items-center space-x-8"
             >
               <a
-                href="#"
-                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                href="index.html"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >Home</a
               >
               <a
                 href="#"
-                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >Kaftan</a
               >
               <a
                 href="#"
-                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >Agbada</a
               >
               <a
                 href="#"
-                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >About</a
               >
               <a
                 href="#"
-                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >Contact</a
               >
               <a
                 href="#"
-                class="text-gray-800 hover:text-gray-600 transition-colors duration-300"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >FAQ</a
               >
             </ul>
@@ -141,6 +158,76 @@
       </div>
     </header>
 
+    <!-- Hero Background Image Slider -->
+    <section
+      id="hero-bg-slider"
+      class="relative h-[80vh] mt-36 flex items-center justify-center 
+      overflow-hidden bg-center bg-cover md:h-[100vh] lg:h-[70vh]"
+    >
+      <!-- Overlay for text -->
+      <div
+        class="absolute inset-0 bg-black/40 
+        flex flex-col items-center justify-center gap-4 text-center text-white z-10"
+      >
+        <h1 class="text-3xl md:text-5xl font-bold">
+          Welcome to Enayon Sublime Design
+        </h1>
+        <p class="text-lg md:text-2xl ">
+          Discover our Kaftan and Agbada collections
+        </p>
+        <a
+          href="#"
+          class="inline-block bg-transparent border-2 border-white hover:bg-blue-100 hover:text-black text-white 
+          font-semibold py-2 px-6 rounded-lg transition duration-700 ease-in-out"
+          >Shop Now</a
+        >
+      </div>
+      <!-- Navigation Buttons -->
+      <button
+        id="bg-prev"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white font-bold text-2xl px-3 py-1 rounded-full hover:bg-black/80 z-20"
+      >
+        &#10094;
+      </button>
+      <button
+        id="bg-next"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white font-bold text-2xl px-3 py-1 rounded-full hover:bg-black/80 z-20"
+      >
+        &#10095;
+      </button>
+      <!-- Dots -->
+      <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-20"
+      >
+        <span
+          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer 
+          hover:bg-slate-600 transition-colors duration-500"
+          data-slide="0"
+        ></span>
+        <span
+          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer 
+          hover:bg-slate-600 transition-colors duration-500"
+          data-slide="1"
+        ></span>
+        <span class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer 
+        hover:bg-slate-600 transition-colors duration-500" data-slide="2"></span>
+      </div>
+    </section>
+    
+    <!-- KAFTANS -->
+    <section id="kaftans" class="py-10 md:py-20">
+      <main class="mx-auto px-4">
+        <h2 class="text-4xl font-semibold mb-8 text-center">Native Wears</h2>
+        <div class="grid grid-cols-4 gap-4 w-full">
+          <div class="">
+           
+          </div>
+          
+        </div>
+        
+      </main>
+    </section>
+
     <!-- Scroll to Top Button -->
     <button
       id="scroll-to-top"
@@ -161,71 +248,6 @@
         ></path>
       </svg>
     </button>
-
-    <!-- Scrolling Text Banner -->
-    <div class="relative overflow-hidden bg-black/50 h-12">
-      <div
-        class="absolute whitespace-nowrap text-white text-lg font-semibold"
-        style="animation: marquee 30s linear infinite; will-change: transform"
-      >
-        Welcome to Enayon Sublime Design! Discover our Kaftan and Agbada
-        collections. Our Official Store is now open! - 8, Huyon Street, Off
-        Apasa Road, Ajido, Badagry, Lagos State.
-      </div>
-    </div>
-
-    <!-- Hero Background Slider -->
-    <section
-      class="relative w-full h-[60vh] md:h-[85vh] flex items-center justify-center overflow-hidden"
-      id="hero-slider"
-    >
-      <!-- Slides -->
-      <div
-        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover"
-        id="slide-0"
-      ></div>
-      <div
-        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover opacity-0"
-        id="slide-1"
-      ></div>
-      <div
-        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover opacity-0"
-        id="slide-2"
-      ></div>
-      <div
-        class="absolute inset-0 transition-all duration-700 ease-in-out bg-center bg-cover opacity-0"
-        id="slide-3"
-      ></div>
-
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/40"></div>
-
-      <!-- Content -->
-      <div class="relative z-10 text-center text-white">
-        <h1 class="text-3xl md:text-5xl font-bold mb-4">
-          Welcome to Enayon Sublime Design
-        </h1>
-        <p class="text-lg md:text-2xl">
-          Discover our Kaftan and Agbada collections
-        </p>
-      </div>
-
-      <!-- Controls -->
-      <button
-        id="prev-slide"
-        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full"
-        aria-label="Previous slide"
-      >
-        &#8592;
-      </button>
-      <button
-        id="next-slide"
-        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full"
-        aria-label="Next slide"
-      >
-        &#8594;
-      </button>
-    </section>
 
     <!-- JavaScript -->
     <script src="./JAVASCRIPT/app.js"></script>
