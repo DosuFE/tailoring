@@ -161,24 +161,21 @@
     <!-- Hero Background Image Slider -->
     <section
       id="hero-bg-slider"
-      class="relative h-[80vh] mt-36 flex items-center justify-center 
-      overflow-hidden bg-center bg-cover md:h-[100vh] lg:h-[70vh]"
+      class="relative h-[80vh] mt-36 flex items-center justify-center overflow-hidden bg-center bg-cover md:h-[100vh] lg:h-[70vh]"
     >
       <!-- Overlay for text -->
       <div
-        class="absolute inset-0 bg-black/40 
-        flex flex-col items-center justify-center gap-4 text-center text-white z-10"
+        class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-4 text-center text-white z-10"
       >
         <h1 class="text-3xl md:text-5xl font-bold">
           Welcome to Enayon Sublime Design
         </h1>
-        <p class="text-lg md:text-2xl ">
+        <p class="text-lg md:text-2xl">
           Discover our Kaftan and Agbada collections
         </p>
         <a
           href="#"
-          class="inline-block bg-transparent border-2 border-white hover:bg-blue-100 hover:text-black text-white 
-          font-semibold py-2 px-6 rounded-lg transition duration-700 ease-in-out"
+          class="inline-block bg-transparent border-2 border-white hover:bg-blue-100 hover:text-black text-white font-semibold py-2 px-6 rounded-lg transition duration-700 ease-in-out"
           >Shop Now</a
         >
       </div>
@@ -200,31 +197,295 @@
         class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-20"
       >
         <span
-          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer 
-          hover:bg-slate-600 transition-colors duration-500"
+          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer hover:bg-slate-600 transition-colors duration-500"
           data-slide="0"
         ></span>
         <span
-          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer 
-          hover:bg-slate-600 transition-colors duration-500"
+          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer hover:bg-slate-600 transition-colors duration-500"
           data-slide="1"
         ></span>
-        <span class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer 
-        hover:bg-slate-600 transition-colors duration-500" data-slide="2"></span>
+        <span
+          class="bg-dot h-3 w-3 rounded-full bg-gray-400 cursor-pointer hover:bg-slate-600 transition-colors duration-500"
+          data-slide="2"
+        ></span>
       </div>
     </section>
-    
+
     <!-- KAFTANS -->
     <section id="kaftans" class="py-10 md:py-20">
       <main class="mx-auto px-4">
-        <h2 class="text-4xl font-semibold mb-8 text-center">Native Wears</h2>
-        <div class="grid grid-cols-4 gap-4 w-full">
-          <div class="">
-           
-          </div>
-          
+        <h2 class="text-4xl font-semibold mb-8 text-center">Our Wears</h2>
+        <!-- OUR FIRST DESIGN IMAGE -->
+        <div>
+          <article
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full"
+          >
+            <!-- FIRST IMAGE DESCRIPTION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 1 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/2.jpg"
+                  alt="Men First Monogram"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal1')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal1')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- SECOND IMAGE DESCRIPTION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 2 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/12.jpg"
+                  alt="Men Moses Design"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal2')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal2')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- THIRD IMAGE DESCRIPTION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 3 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/4.jpg"
+                  alt="Men Second Monogram"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal3')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal3')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- FOURTH IMAGE DESCRIPTION  -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 4 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/6.jpg"
+                  alt="Men First Monogram"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal4')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal4')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- FIFTH IMAGE DESCRIPTION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 5 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/1.jpg"
+                  alt="Men Agbada"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal5')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal5')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- SIXTH IMAGE DESCRIPTION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 6 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/28.jpg"
+                  alt="Men Agbada Monogram"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal6')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal6')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- SEVENTH IMAGE DESCRIPTION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 7 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/22.jpg"
+                  alt="Men First Monogram"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal7')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal7')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+            </div>
+
+            <!-- EIGTH IMAGE DESCRITION -->
+            <div
+              class="bg-transparent shadow-md shadow-black/30 rounded-lg pb-6"
+            >
+              <!-- IMAGE 8 -->
+              <div class="overflow-hidden">
+                <img
+                  src="./assets/19.jpg"
+                  alt="Men Short Wear"
+                  class="block w-full h-auto rounded-lg shadow-lg shadow-black/30 transition-transform duration-700 ease-in-out cursor-zoom-in hover:scale-110 lg:cursor-default"
+                  style="object-fit: cover"
+                  onclick="window.innerWidth < 1024 && openModal('modal8')"
+                />
+              </div>
+              <!-- CHAT LINK -->
+              <div class="flex justify-center items-center mt-4 gap-6">
+                <a
+  href="https://wa.link/ljqnlb" target="_blank"
+  class="bg-black/20 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+>
+  Chat me
+</a>
+
+                <button
+                  onclick="openModal('modal8')"
+                  class="bg-black/20 font-semibold 
+                  py-2 px-4 rounded-lg hover:bg-slate-200 transition 
+                  duration-700 ease-in-out uppercase text-center text-lg italic lg:hidden"
+                  >See In Full</button
+                >
+              </div>
+              </div>
+            </div>
+          </article>
         </div>
-        
       </main>
     </section>
 
@@ -249,7 +510,122 @@
       </svg>
     </button>
 
+    <!-- Modal 1 -->
+    <div id="modal1" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/2.jpg" alt="Men First Monogram" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal1')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/12.jpg" alt="Men Moses Design" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal2')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/4.jpg" alt="Men Second Monogram" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal3')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/6.jpg" alt="Men First Monogram" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal4')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal5" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/1.jpg" alt="Men Agbada" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal5')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="modal6" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/28.jpg" alt="Men Agbada Monogram" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal6')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div id="modal7" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/22.jpg" alt="Men First Monogram" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal7')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div id="modal8" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-2 sm:p-4 md:p-6">
+      <div class="relative w-full max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] xl:max-w-[65vw]">
+        <img src="./assets/19.jpg" alt="Men Short Wear" class="w-full h-auto rounded-lg shadow-2xl">
+        <button onclick="closeModal('modal8')" class="absolute -top-4 -right-4 text-white text-2xl hover:text-gray-300 bg-black/80 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+          &times;
+        </button>
+      </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="./JAVASCRIPT/app.js"></script>
+    <script>
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close modal when clicking outside the image
+      document.querySelectorAll('[id^="modal"]').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeModal(this.id);
+          }
+        });
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('[id^="modal"]').forEach(modal => {
+            if (!modal.classList.contains('hidden')) {
+              closeModal(modal.id);
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
