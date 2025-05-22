@@ -518,24 +518,82 @@
       ></video>
     </section>
 
-    <!-- FASHION SHOW VIDEO -->
-    <!-- <section class="h-[500px] flex flex-col items-center justify-center lg:flex-row">
-      <video src="./assets/agbada.mp4" type="video/mp4"
-        class="w-full" 
-        autoplay muted loop playsinline>
-      </video>
-      <video src="./assets/modern_native.mp4" type="video/mp4"
-        class="w-full" 
-        autoplay muted loop playsinline>
-      </video>
-    </section> -->
+    <!-- IMAGE MOVING IN HORIZONTAL FORM -->
+    <main class="py-10 px5 flex items-center justify-center gap-4 flex-wrap">
+      <div class="overflow-x-hidden w-full py-10">
+        <div class="flex gap-4 flex-nowrap scrolling-wrapper w-max">
+          <img
+            src="./assets/37.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/57.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/56.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/58.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/59.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/60.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/61.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/62.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/63.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <!-- Duplicate images for seamless loop -->
+          <img
+            src="./assets/37.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/57.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <img
+            src="./assets/56.jpg"
+            alt="Fila Image"
+            class="rounded-[60px] w-64 h-64 object-cover shadow-lg shadow-black/30 transition-transform duration-1000 ease-in-out cursor-zoom-in hover:scale-110"
+          />
+          <!-- ...repeat as needed for smooth loop -->
+        </div>
+      </div>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="bgblack/75">
-      <div class="px5 lg:gap6 py10 lg:flx lg:justifyevenly">
+    <footer class="bg-slate-50 py-10 mt-10">
+      <section class="px-5 md:px-10 lg:flex lg:justify-between lg:items-start">
         <!-- LOGO -->
-        <!-- <div class="flex flex-col gap-4 text-white">
-          <div>
+        <div>
+          <div class="text-black/80 flex items-center gap-2 lg:gap-4">
             <a
               href="index.html"
               class="uppercase flex items-center gap-2 lg:gap-4"
@@ -553,20 +611,24 @@
               </div>
             </a>
           </div>
-          <p class="text-white lg:max-w-xl">
+          <p
+            class="text-sm text-black/50 py-5 hover:text-black/80 md:max-w-xl lg:max-w-md"
+          >
             Step into a world where style meets sophistication. Our
             fashion-forward platform brings you the latest trends, and curated
             collections designed to elevate your wardrobe.
           </p>
-        </div> -->
+        </div>
 
         <!-- CONTACT -->
-        <!-- <section class="flex gap-10 text-white md:gap-48 lg:gap-10 lg:px-">
-          <div class="flex flex-col items-start">
-            <p class="pb-3 text-2xl pt-7">CONTACT</p>
+        <section
+          class="text-black/50 flex flex-col md:items-center md:justify-between md:gap-10 md:flex-row lg:gap-10"
+        >
+          <div>
+            <p class="pb-3 text-2xl">CONTACT</p>
             <ul class="flex flex-col gap-4">
-              
-              <li class="flex items-center gap-2 hover:text-slate-100">
+              <!-- LOCATION -->
+              <li class="flex items-center gap-2 hover:text-black/80">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-7 w-7"
@@ -593,8 +655,8 @@
                 >
               </li>
 
-              
-              <li class="flex items-center gap-2 hover:text-slate-100">
+              <!-- MAIL -->
+              <li class="flex items-center gap-2 hover:text-black/80">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="w-6 h-6"
@@ -616,9 +678,8 @@
                   sulaimondosu988@gmail.com
                 </a>
               </li>
-
-             
-              <li class="flex items-center gap-2">
+              <!-- NUMBER -->
+              <li class="flex items-center gap-2 hover:text-black/80">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="w-6 h-6"
@@ -634,22 +695,66 @@
                   />
                 </svg>
                 <a
-                  href="tel:+2349126116913"
-                  class="hover:text-gray-300 transition-colors duration-300"
+                  href="tel:+234 907 346 6324"
+                  class="transition-colors duration-300"
                 >
                   +234 912 611 6913
                 </a>
               </li>
             </ul>
           </div>
-          <div class="flex flex-col items-start">
-            <p class="pb-3 text-2xl pt-7">Products</p>
-            <ul class="flex flex-col gap-4">
-              <li><a href="" class="hover:underline">Agbada</a></li>
-              <li><a href="" class="hover:underline">Kaftans</a></li>
+          <!-- SOCIAL MEDIA -->
+          <!-- <div class="flex flex-col items-start">
+            <p class="pb-2 text-2xl">Follow Us</p>
+            <ul class="flex gap-4">
+              <li>
+                <a
+                  href="https://www.instagram.com/enayonsublimedesign/"
+                  target="_blank"
+                  class="hover:underline hover:text-black/80"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.link/ljqnlb"
+                  target="_blank"
+                  class="hover:underline hover:text-black/80"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div> -->
+          <!-- PRODUCTS -->
+          <div class="flex flex-col items-start lg:-mt-10">
+            <p class="pb-2 text-2xl">Products</p>
+            <ul class="flex flex-col gap-4 md:flex-row lg:flex-col">
+              <li>
+                <a href="" class="hover:underline hover:text-black/80"
+                  >Agbada</a
+                >
+              </li>
+              <li>
+                <a href="" class="hover:underline hover:text-black/80"
+                  >Kaftans</a
+                >
+              </li>
             </ul>
           </div>
-        </section> -->
+        </section>
+      </section>
+
+      <!-- COPYRIGHT -->
+      <div class="flex flex-col items-center justify-center mt-10 px-5">
+        <p class="text-sm text-black/50 text-center">
+          &copy; 2025 Enayon Sublime Design. All rights reserved.
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center mt-2">
+        <p class="text-sm text-black/50">
+          Designed by
+          <a href="" class="italic font-semibold"> SULEXCINO </a>
+        </p>
       </div>
     </footer>
 
