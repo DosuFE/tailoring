@@ -15,123 +15,7 @@
 
     <!-- CSS -->
     <link href="./output.css" rel="stylesheet" />
-    <style>
-        .kaftan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-        }
-        .kaftan-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .kaftan-item:hover {
-            transform: scale(1.05);
-        }
-        .kaftan-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        .kaftan-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        .kaftan-item:hover .kaftan-overlay {
-            transform: translateY(0);
-        }
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        .modal-content {
-            position: relative;
-            background-color: white;
-            margin: 5% auto;
-            padding: 2rem;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .close-modal {
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #666;
-        }
-        .close-modal:hover {
-            color: #000;
-        }
-        .order-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .form-group label {
-            font-weight: 600;
-            color: #333;
-        }
-        .form-group input,
-        .form-group textarea {
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-        }
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-        .submit-btn {
-            background-color: #25D366;
-            color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .submit-btn:hover {
-            background-color: #128C7E;
-        }
-        .selected-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-    </style>
+   
 </head>
 <body class="bg-gray-50">
     <header class="fixed top-0 w-full z-50">
@@ -451,7 +335,7 @@
     </footer>
   
     <!-- Scroll to Top Button -->
-    <!-- <button
+    <button
         id="scroll-to-top"
         class="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
         aria-label="Scroll to top"
@@ -469,37 +353,34 @@
             d="M5 15l7-7 7 7"
           ></path>
         </svg>
-    </button> -->
+    </button>
 
     <!-- Order Modal -->
-    <div id="orderModal" class="modal">
+    <div id="order-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <img id="selectedImage" class="selected-image" src="" alt="Selected Kaftan">
-            <form id="orderForm" class="order-form">
+            <img id="selected-image" class="selected-image" src="" alt="Selected Kaftan">
+            <form id="order-form" class="order-form">
                 <div class="form-group">
-                    <label for="customerName">Your Name</label>
-                    <input type="text" id="customerName" required placeholder="Enter your name">
+                    <label for="customer-name">Your Name</label>
+                    <input type="text" id="customer-name" required placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
-                    <label for="customerPhone">Phone Number</label>
-                    <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+                    <label for="customer-phone">Phone Number</label>
+                    <input type="tel" id="customer-phone" required placeholder="Enter your phone number">
                 </div>
                 <div class="form-group">
-                    <label for="customerMessage">Additional Details</label>
-                    <textarea id="customerMessage" placeholder="Enter any specific requirements or measurements"></textarea>
+                    <label for="customer-message">Measurements or Message</label>
+                    <textarea id="customer-message" required placeholder="Enter your measurements or any specific requirements"></textarea>
                 </div>
+                <input type="hidden" id="selected-style">
                 <button type="submit" class="submit-btn">Send to WhatsApp</button>
             </form>
         </div>
     </div>
 
-    
     <!-- JavaScript -->
     <script>
-  
-
-
         // Array of kaftan images
         const kaftanImages = Array.from({length: 67}, (_, i) => ({
             id: i + 1,
@@ -520,6 +401,9 @@
                     <img src="${kaftan.src}" alt="${kaftan.alt}" loading="lazy">
                     <div class="kaftan-overlay">
                         <h3 class="text-lg font-semibold">${kaftan.title}</h3>
+                        <button class="inline-block mt-2 px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors">
+                            Order Now
+                        </button>
                     </div>
                 `;
                 
@@ -531,14 +415,15 @@
         }
 
         // Modal functionality
-        const modal = document.getElementById('orderModal');
+        const modal = document.getElementById('order-modal');
         const closeBtn = document.querySelector('.close-modal');
-        const orderForm = document.getElementById('orderForm');
-        const selectedImage = document.getElementById('selectedImage');
+        const form = document.getElementById('order-form');
+        const selectedImage = document.getElementById('selected-image');
 
         function openOrderModal(kaftan) {
             selectedImage.src = kaftan.src;
             selectedImage.alt = kaftan.alt;
+            document.getElementById('selected-style').value = kaftan.title;
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
@@ -546,35 +431,38 @@
         function closeOrderModal() {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-            orderForm.reset();
+            form.reset();
         }
 
-        closeBtn.onclick = closeOrderModal;
+        closeBtn.addEventListener('click', closeOrderModal);
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
                 closeOrderModal();
             }
-        }
+        });
 
         // Handle form submission
-        orderForm.addEventListener('submit', function(e) {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            const name = document.getElementById('customerName').value;
-            const phone = document.getElementById('customerPhone').value;
-            const message = document.getElementById('customerMessage').value;
+            const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const message = document.getElementById('customer-message').value;
+            const style = document.getElementById('selected-style').value;
             const imageUrl = selectedImage.src;
-            
+
             // Create WhatsApp message
-            const whatsappMessage = `Hello, I'm interested in ordering this kaftan style.\n\nName: ${name}\nPhone: ${phone}\nAdditional Details: ${message}\n\nImage: ${imageUrl}`;
+            const whatsappMessage = `Hello, I'm interested in ordering:\n\nStyle: ${style}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}\n\nImage: ${imageUrl}`;
             
             // Encode the message for WhatsApp URL
             const encodedMessage = encodeURIComponent(whatsappMessage);
             
             // Open WhatsApp with the message
-            window.open(`https://wa.me/2349126116913?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/2349073466324?text=${encodedMessage}`, '_blank');
             
+            // Close the modal
             closeOrderModal();
         });
 
