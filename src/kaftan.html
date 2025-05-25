@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kaftan Collection - Enayon Sublime Design</title>
@@ -15,272 +15,274 @@
 
     <!-- CSS -->
     <link href="./output.css" rel="stylesheet" />
-   
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <header class="fixed top-0 w-full z-50">
-        <!-- Scrolling Text Banner -->
-        <div class="bg-black/85 h-12">
-          <div
-            class="whitespace-nowrap text-white text-lg font-semibold"
-            style="animation: marquee 30s linear infinite; will-change: transform"
-          >
-            Welcome to Enayon Sublime Design! Discover our Kaftan and Agbada
-            collections. Our Official Store is now open! - 8, Huyon Street, Off
-            Apasa Road, Ajido, Badagry, Lagos State.
-          </div>
-        </div>
-  
+      <!-- Scrolling Text Banner -->
+      <div class="bg-black/85 h-12">
         <div
-          class="bg-slate-200 mx-auto px-4 py-3 shadow-md shadow-black/30 lg:px-10"
+          class="whitespace-nowrap text-white text-lg font-semibold"
+          style="animation: marquee 30s linear infinite; will-change: transform"
         >
-          <!-- BRAND LOGO -->
-          <div class="flex items-center justify-between">
-            <!-- Logo -->
-            <div>
+          Welcome to Enayon Sublime Design! Discover our Kaftan and Agbada
+          collections. Our Official Store is now open! - 8, Huyon Street, Off
+          Apasa Road, Ajido, Badagry, Lagos State.
+        </div>
+      </div>
+
+      <div
+        class="bg-slate-200 mx-auto px-4 py-3 shadow-md shadow-black/30 lg:px-10"
+      >
+        <!-- BRAND LOGO -->
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div>
+            <a
+              href="index.html"
+              class="uppercase flex items-center gap-2 lg:gap-4"
+            >
+              <img
+                src="./assets/enayon_logo.png"
+                alt="Enayon Sublime Design"
+                srcset=""
+              />
+              <div>
+                <span class="inline-block font-bold italic text-2xl"
+                  ><span class="text-4xl">E</span>nayon</span
+                ><br />
+                <span class="text-lg">Sublime Design</span>
+              </div>
+            </a>
+          </div>
+          <!-- END OF BRAND LOGO -->
+
+          <!-- Navigation Menu -->
+          <nav class="relative">
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobile-menu-button"
+              class="p-2 rounded-lg hover:bg-slate-300 focus:outline-none hover:shadow-lg hover:shadow-black/30 hover:transition-all hover:duration-700 hover:ease-in-out hover:scale-110 hover:text-white md:hidden"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Desktop Navigation Links -->
+            <ul
+              id="nav-menu"
+              class="hidden text-xl font-semibold md:flex items-center space-x-8"
+            >
               <a
                 href="index.html"
-                class="uppercase flex items-center gap-2 lg:gap-4"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
+                >Home</a
               >
-                <img
-                  src="./assets/enayon_logo.png"
-                  alt="Enayon Sublime Design"
-                  srcset=""
-                />
-                <div>
-                  <span class="inline-block font-bold italic text-2xl"
-                    ><span class="text-4xl">E</span>nayon</span
-                  ><br />
-                  <span class="text-lg">Sublime Design</span>
-                </div>
-              </a>
+              <a
+                href="kaftan.html"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
+                >Styles</a
+              >
+
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
+                >About</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
+                >FAQ</a
+              >
+            </ul>
+
+            <!-- Mobile Navigation Menu -->
+            <div
+              id="mobile-menu"
+              class="hidden md:hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+            >
+              <a
+                href="index.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Home</a
+              >
+              <a
+                href="kaftan.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Styles</a
+              >
+
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >About</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
+                >FAQ</a
+              >
             </div>
-            <!-- END OF BRAND LOGO -->
-  
-            <!-- Navigation Menu -->
-            <nav class="relative">
-              <!-- Mobile Menu Button -->
-              <button
-                id="mobile-menu-button"
-                class="p-2 rounded-lg hover:bg-slate-300 focus:outline-none hover:shadow-lg hover:shadow-black/30 hover:transition-all hover:duration-700 hover:ease-in-out hover:scale-110 hover:text-white md:hidden"
-                aria-label="Toggle mobile menu"
-              >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-44 pb-10">
+      <h1 class="text-4xl font-bold text-center mb-8 font-mono">
+        Kaftan Collection
+      </h1>
+      <div id="kaftan-grid" class="kaftan-grid"></div>
+      <!-- Load More Button (Mobile Only) -->
+      <div id="load-more-container" class="flex justify-center mt-8 md:hidden">
+        <button
+          id="load-more-btn"
+          class="bg-black/20 font-semibold py-3 px-6 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+        >
+          Load More
+        </button>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-200 py-10 mt-10">
+      <section class="px-5 md:px-10 lg:flex lg:justify-between lg:items-start">
+        <!-- LOGO -->
+        <div>
+          <div class="text-black/80 flex items-center gap-2 lg:gap-4">
+            <a
+              href="index.html"
+              class="uppercase flex items-center gap-2 lg:gap-4"
+            >
+              <img
+                src="./assets/enayon_logo.png"
+                alt="Enayon Sublime Design"
+                srcset=""
+              />
+              <div>
+                <span class="inline-block font-bold italic text-2xl"
+                  ><span class="text-4xl">E</span>nayon</span
+                ><br />
+                <span class="text-lg">Sublime Design</span>
+              </div>
+            </a>
+          </div>
+          <p
+            class="text-sm text-black/50 py-5 hover:text-black/80 md:max-w-xl lg:max-w-md"
+          >
+            Step into a world where style meets sophistication. Our
+            fashion-forward platform brings you the latest trends, and curated
+            collections designed to elevate your wardrobe.
+          </p>
+        </div>
+
+        <!-- CONTACT -->
+        <section
+          class="text-black/50 flex flex-col md:items-center md:justify-between md:gap-10 md:flex-row lg:gap-10"
+        >
+          <div>
+            <p class="pb-3 text-2xl">CONTACT</p>
+            <ul class="flex flex-col gap-4">
+              <!-- LOCATION -->
+              <li class="flex items-center gap-2 hover:text-black/80">
                 <svg
-                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
                   fill="none"
-                  stroke="currentColor"
                   viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
-              </button>
-  
-              <!-- Desktop Navigation Links -->
-              <ul
-                id="nav-menu"
-                class="hidden text-xl font-semibold md:flex items-center space-x-8"
-              >
-                <a
-                  href="index.html"
-                  class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
-                  >Home</a
+                <span
+                  >8, Huyon Street, Off Apasa Road, Ajido, Badagry, Lagos
+                  State</span
                 >
-                <a
-                  href="kaftan.html"
-                  class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
-                  >Kaftan</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
-                  >Agbada</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
-                  >About</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
-                  >Contact</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
-                  >FAQ</a
-                >
-              </ul>
-  
-              <!-- Mobile Navigation Menu -->
-              <div
-                id="mobile-menu"
-                class="hidden md:hidden absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
-              >
-                <a
-                  href="index.html"
-                  class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
-                  >Home</a
-                >
-                <a
-                  href="kaftan.html"
-                  class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
-                  >Kaftan</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
-                  >Agbada</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
-                  >About</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
-                  >Contact</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
-                  >FAQ</a
-                >
-              </div>
-            </nav>
-          </div>
-        </div>
-    </header>
+              </li>
 
-    <!-- Main Content -->
-    <main class="pt-32 pb-10">
-        <h1 class="text-4xl font-bold text-center mb-8">Kaftan Collection</h1>
-        <div id="kaftan-grid" class="kaftan-grid"></div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-50 py-10 mt-10">
-        <section class="px-5 md:px-10 lg:flex lg:justify-between lg:items-start">
-          <!-- LOGO -->
-          <div>
-            <div class="text-black/80 flex items-center gap-2 lg:gap-4">
-              <a
-                href="index.html"
-                class="uppercase flex items-center gap-2 lg:gap-4"
-              >
-                <img
-                  src="./assets/enayon_logo.png"
-                  alt="Enayon Sublime Design"
-                  srcset=""
-                />
-                <div>
-                  <span class="inline-block font-bold italic text-2xl"
-                    ><span class="text-4xl">E</span>nayon</span
-                  ><br />
-                  <span class="text-lg">Sublime Design</span>
-                </div>
-              </a>
-            </div>
-            <p
-              class="text-sm text-black/50 py-5 hover:text-black/80 md:max-w-xl lg:max-w-md"
-            >
-              Step into a world where style meets sophistication. Our
-              fashion-forward platform brings you the latest trends, and curated
-              collections designed to elevate your wardrobe.
-            </p>
+              <!-- MAIL -->
+              <li class="flex items-center gap-2 hover:text-black/80">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a
+                  href="mailto:sulaimondosu988@gmail.com"
+                  class="transition-colors duration-300"
+                >
+                  enayondauda@gmail.com
+                </a>
+              </li>
+              <!-- NUMBER -->
+              <li class="flex items-center gap-2 hover:text-black/80">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <a
+                  href="tel:+234 907 346 6324"
+                  class="transition-colors duration-300"
+                >
+                  +234 907 346 6324
+                </a>
+              </li>
+            </ul>
           </div>
-  
-          <!-- CONTACT -->
-          <section
-            class="text-black/50 flex flex-col md:items-center md:justify-between md:gap-10 md:flex-row lg:gap-10"
-          >
-            <div>
-              <p class="pb-3 text-2xl">CONTACT</p>
-              <ul class="flex flex-col gap-4">
-                <!-- LOCATION -->
-                <li class="flex items-center gap-2 hover:text-black/80">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-7 w-7"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <span
-                    >8, Huyon Street, Off Apasa Road, Ajido, Badagry, Lagos
-                    State</span
-                  >
-                </li>
-  
-                <!-- MAIL -->
-                <li class="flex items-center gap-2 hover:text-black/80">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <a
-                    href="mailto:sulaimondosu988@gmail.com"
-                    class="transition-colors duration-300"
-                  >
-                    enayondauda@gmail.com
-                  </a>
-                </li>
-                <!-- NUMBER -->
-                <li class="flex items-center gap-2 hover:text-black/80">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <a
-                    href="tel:+234 907 346 6324"
-                    class="transition-colors duration-300"
-                  >
-                    +234 912 611 6913
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- SOCIAL MEDIA -->
-            <!-- <div class="flex flex-col items-start">
+          <!-- SOCIAL MEDIA -->
+          <!-- <div class="flex flex-col items-start">
               <p class="pb-2 text-2xl">Follow Us</p>
               <ul class="flex gap-4">
                 <li>
@@ -301,188 +303,318 @@
                 </li>
               </ul>
             </div> -->
-            <!-- PRODUCTS -->
-            <div class="flex flex-col items-start">
-              <p class="pb2 text-2xl">Products</p>
-              <ul class="flex flex-col gap-4 md:flex-row lg:flex-col">
-                <li>
-                  <a href="" class="hover:underline hover:text-black/80"
-                    >Agbada</a
-                  >
-                </li>
-                <li>
-                  <a href="kaftan.html" class="hover:underline hover:text-black/80"
-                    >Kaftans</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </section>
+          <!-- PRODUCTS -->
+          <div class="flex flex-col items-start">
+            <p class="pb2 text-2xl">Products</p>
+            <ul class="flex flex-col gap-4 md:flex-row lg:flex-col">
+              <li>
+                <a
+                  href="kaftan.html"
+                  class="hover:underline hover:text-black/80"
+                  >Styles</a
+                >
+              </li>
+            </ul>
+          </div>
         </section>
-  
-        <!-- COPYRIGHT -->
-        <div class="flex flex-col items-center justify-center mt-10 px-5">
-          <p class="text-sm text-black/50 text-center">
-            &copy; 2025 Enayon Sublime Design. All rights reserved.
-          </p>
-        </div>
-        <div class="flex flex-col items-center justify-center mt-2">
-          <p class="text-sm text-black/50">
-            Designed by
-            <a href="" class="italic font-semibold"> GBEWATO </a>
-          </p>
-        </div>
+      </section>
+
+      <!-- COPYRIGHT -->
+      <div class="flex flex-col items-center justify-center mt-10 px-5">
+        <p class="text-sm text-black/50 text-center">
+          &copy; 2025 Enayon Sublime Design. All rights reserved.
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center mt-2">
+        <p class="text-sm text-black/50">
+          Designed by
+          <a href="" class="italic font-semibold"> GBEWATO </a>
+        </p>
+      </div>
     </footer>
-  
+
     <!-- Scroll to Top Button -->
     <button
-        id="scroll-to-top"
-        class="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
-        aria-label="Scroll to top"
+      id="scroll-to-top"
+      class="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
+      aria-label="Scroll to top"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
       >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 15l7-7 7 7"
-          ></path>
-        </svg>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
     </button>
 
     <!-- Order Modal -->
     <div id="order-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img id="selected-image" class="selected-image" src="" alt="Selected Kaftan">
-            <form id="order-form" class="order-form">
-                <div class="form-group">
-                    <label for="customer-name">Your Name</label>
-                    <input type="text" id="customer-name" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="customer-phone">Phone Number</label>
-                    <input type="tel" id="customer-phone" required placeholder="Enter your phone number">
-                </div>
-                <div class="form-group">
-                    <label for="customer-message">Measurements or Message</label>
-                    <textarea id="customer-message" required placeholder="Enter your measurements or any specific requirements"></textarea>
-                </div>
-                <input type="hidden" id="selected-style">
-                <button type="submit" class="submit-btn">Send to WhatsApp</button>
-            </form>
-        </div>
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          id="selected-image"
+          class="selected-image"
+          src=""
+          alt="Selected Kaftan"
+        />
+        <form id="order-form" class="order-form">
+          <div class="form-group">
+            <label for="customer-name">Your Name</label>
+            <input
+              type="text"
+              id="customer-name"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="customer-phone">Phone Number</label>
+            <input
+              type="tel"
+              id="customer-phone"
+              required
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="customer-message">Measurements or Message</label>
+            <textarea
+              id="customer-message"
+              required
+              placeholder="Enter your measurements or any specific requirements"
+            ></textarea>
+          </div>
+          <input type="hidden" id="selected-style" />
+          <button type="submit" class="submit-btn">Send to WhatsApp</button>
+        </form>
+      </div>
     </div>
 
     <!-- JavaScript -->
     <script>
-        // Array of kaftan images
-        const kaftanImages = Array.from({length: 67}, (_, i) => ({
-            id: i + 1,
-            src: `./assets/${i + 1}.jpg`,
-            alt: `Kaftan Design ${i + 1}`,
-            title: `Kaftan Style ${i + 1}`
-        }));
+      // Scroll to Top Button Functionality
+      const scrollToTopBtn = document.getElementById("scroll-to-top");
 
-        // Function to create and append kaftan items to the grid
-        function createKaftanGrid() {
-            const grid = document.getElementById('kaftan-grid');
-            
-            kaftanImages.forEach(kaftan => {
-                const item = document.createElement('div');
-                item.className = 'kaftan-item';
-                
-                item.innerHTML = `
-                    <img src="${kaftan.src}" alt="${kaftan.alt}" loading="lazy">
-                    <div class="kaftan-overlay">
-                        <h3 class="text-lg font-semibold">${kaftan.title}</h3>
-                        <button class="inline-block mt-2 px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors">
-                            Order Now
-                        </button>
-                    </div>
-                `;
-                
-                // Add click event to open modal
-                item.addEventListener('click', () => openOrderModal(kaftan));
-                
-                grid.appendChild(item);
-            });
+      // Show/hide button based on scroll position
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.remove("hidden");
+        } else {
+          scrollToTopBtn.classList.add("hidden");
+        }
+      });
+
+      // Scroll to top when button is clicked
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Function to create and append kaftan items to the grid
+      function createKaftanGrid() {
+        const grid = document.getElementById("kaftan-grid");
+        const loadMoreContainer = document.getElementById(
+          "load-more-container"
+        );
+        const loadMoreBtn = document.getElementById("load-more-btn");
+
+        let imageNumber = 1;
+        const maxAttempts = 200;
+        let isMobile = window.innerWidth < 768; // 768px is the md breakpoint in Tailwind
+        let initialLoadComplete = false;
+        let allImagesLoaded = false;
+
+        // Show load more button only on mobile
+        if (isMobile) {
+          loadMoreContainer.classList.remove("hidden");
+        } else {
+          loadMoreContainer.classList.add("hidden");
         }
 
-        // Modal functionality
-        const modal = document.getElementById('order-modal');
-        const closeBtn = document.querySelector('.close-modal');
-        const form = document.getElementById('order-form');
-        const selectedImage = document.getElementById('selected-image');
+        function addNextImage() {
+          if (imageNumber > maxAttempts || allImagesLoaded) return;
 
-        function openOrderModal(kaftan) {
-            selectedImage.src = kaftan.src;
-            selectedImage.alt = kaftan.alt;
-            document.getElementById('selected-style').value = kaftan.title;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+          const img = new Image();
+          img.src = `./assets/${imageNumber}.jpg`;
 
-        function closeOrderModal() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            form.reset();
-        }
+          img.onload = function () {
+            // Image exists, create the kaftan item
+            const item = document.createElement("div");
+            item.className = "kaftan-item";
 
-        closeBtn.addEventListener('click', closeOrderModal);
+            item.innerHTML = `
+                        <img src="${img.src}" alt="Kaftan Design ${imageNumber}" loading="lazy">
+                        <div class="kaftan-overlay">
+                            <button class="inline-block px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors">
+                                Order Now
+                            </button>
+                        </div>
+                    `;
 
-        // Close modal when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeOrderModal();
+            // Add click event to open modal
+            item.addEventListener("click", () =>
+              openOrderModal({
+                src: img.src,
+                alt: `Kaftan Design ${imageNumber}`,
+                title: `Kaftan Style ${imageNumber}`,
+              })
+            );
+
+            // On mobile, only show first 40 images initially
+            if (isMobile && imageNumber > 40 && !initialLoadComplete) {
+              item.style.display = "none";
             }
-        });
 
-        // Handle form submission
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('customer-name').value;
-            const phone = document.getElementById('customer-phone').value;
-            const message = document.getElementById('customer-message').value;
-            const style = document.getElementById('selected-style').value;
-            const imageUrl = selectedImage.src;
+            grid.appendChild(item);
 
-            // Create WhatsApp message
-            const whatsappMessage = `Hello, I'm interested in ordering:\n\nStyle: ${style}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}\n\nImage: ${imageUrl}`;
-            
-            // Encode the message for WhatsApp URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            
-            // Open WhatsApp with the message
-            window.open(`https://wa.me/2349073466324?text=${encodedMessage}`, '_blank');
-            
-            // Close the modal
-            closeOrderModal();
-        });
+            // Try the next image
+            imageNumber++;
+            addNextImage();
+          };
 
-        // Initialize the grid when the page loads
-        document.addEventListener('DOMContentLoaded', createKaftanGrid);
-
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                mobileMenu.classList.add('hidden');
+          img.onerror = function () {
+            // Image doesn't exist, stop trying
+            allImagesLoaded = true;
+            initialLoadComplete = true;
+            // Only hide the button if we're on mobile and have more than 40 images
+            if (isMobile && imageNumber > 40) {
+              loadMoreContainer.classList.remove("hidden");
+            } else {
+              loadMoreContainer.classList.add("hidden");
             }
+            return;
+          };
+        }
+
+        // Load More button click handler
+        loadMoreBtn.addEventListener("click", () => {
+          const hiddenItems = grid.querySelectorAll(
+            '.kaftan-item[style*="display: none"]'
+          );
+          hiddenItems.forEach((item) => {
+            item.style.display = "";
+          });
+          loadMoreContainer.classList.add("hidden");
         });
+
+        // Handle window resize
+        window.addEventListener("resize", () => {
+          const wasMobile = isMobile;
+          isMobile = window.innerWidth < 768;
+
+          // If switching between mobile and desktop
+          if (wasMobile !== isMobile) {
+            if (isMobile) {
+              // Switching to mobile
+              const items = grid.querySelectorAll(".kaftan-item");
+              items.forEach((item, index) => {
+                if (index >= 40) {
+                  item.style.display = "none";
+                }
+              });
+              // Show load more button if we have more than 40 images
+              if (items.length > 40) {
+                loadMoreContainer.classList.remove("hidden");
+              }
+            } else {
+              // Switching to desktop
+              const items = grid.querySelectorAll(".kaftan-item");
+              items.forEach((item) => {
+                item.style.display = "";
+              });
+              loadMoreContainer.classList.add("hidden");
+            }
+          }
+        });
+
+        // Start adding images
+        addNextImage();
+      }
+
+      // Modal functionality
+      const modal = document.getElementById("order-modal");
+      const closeBtn = document.querySelector(".close-modal");
+      const form = document.getElementById("order-form");
+      const selectedImage = document.getElementById("selected-image");
+
+      function openOrderModal(kaftan) {
+        selectedImage.src = kaftan.src;
+        selectedImage.alt = kaftan.alt;
+        document.getElementById("selected-style").value = kaftan.title;
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeOrderModal() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+        form.reset();
+      }
+
+      closeBtn.addEventListener("click", closeOrderModal);
+
+      // Close modal when clicking outside
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeOrderModal();
+        }
+      });
+
+      // Handle form submission
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("customer-name").value;
+        const phone = document.getElementById("customer-phone").value;
+        const message = document.getElementById("customer-message").value;
+        const style = document.getElementById("selected-style").value;
+        const imageUrl = selectedImage.src;
+
+        // Create WhatsApp message
+        const whatsappMessage = `Hello, I'm interested in ordering:\n\nStyle: ${style}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}\n\nImage: ${imageUrl}`;
+
+        // Encode the message for WhatsApp URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+
+        // Open WhatsApp with the message
+        window.open(
+          `https://wa.me/2349073466324?text=${encodedMessage}`,
+          "_blank"
+        );
+
+        // Close the modal
+        closeOrderModal();
+      });
+
+      // Initialize the grid when the page loads
+      document.addEventListener("DOMContentLoaded", createKaftanGrid);
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (event) => {
+        if (
+          !mobileMenuButton.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
