@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaftan Collection - Enayon Sublime Design</title>
+    <title>Enayon Sublime Design</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,8 +15,139 @@
 
     <!-- CSS -->
     <link href="./output.css" rel="stylesheet" />
+    <style>
+      .about-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("./assets/2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .fade-in {
+        animation: fadeIn 1.5s ease-in;
+      }
+
+      .slide-up {
+        animation: slideUp 1s ease-out;
+      }
+
+      .slide-in-left {
+        animation: slideInLeft 1s ease-out;
+      }
+
+      .slide-in-right {
+        animation: slideInRight 1s ease-out;
+      }
+
+      .scale-in {
+        animation: scaleIn 0.5s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5e7eb;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        left: -4px;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #4b5563;
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .timeline-item {
+          padding-left: 1.5rem;
+        }
+
+        .timeline-item::before {
+          left: 0;
+        }
+
+        .timeline-item::after {
+          left: -3px;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-gray-50">
+  <body>
+    <!-- Header -->
     <header class="fixed top-0 w-full z-50">
       <!-- Scrolling Text Banner -->
       <div class="bg-black/85 h-12">
@@ -94,7 +225,6 @@
                 class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
                 >Styles</a
               >
-
               <a
                 href="about.html"
                 class="text-gray-800 hover:text-gray-600 transition-colors duration-700"
@@ -127,7 +257,6 @@
                 class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
                 >Styles</a
               >
-
               <a
                 href="about.html"
                 class="block px-4 py-2 text-gray-800 hover:bg-slate-100"
@@ -149,22 +278,175 @@
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="pt-44 pb-10">
-      <h1 class="text-4xl font-bold text-center mb-8 font-mono">
-        Kaftan Collection
-      </h1>
-      <div id="kaftan-grid" class="kaftan-grid"></div>
-      <!-- Load More Button (Mobile Only) -->
-      <div id="load-more-container" class="flex justify-center mt-8 md:hidden">
-        <button
-          id="load-more-btn"
-          class="bg-black/20 font-semibold py-3 px-6 rounded-lg hover:bg-slate-200 transition duration-700 ease-in-out uppercase text-center text-lg italic"
+    <!-- About Hero Section -->
+    <section
+      class="about-hero min-h-[60vh] flex items-center justify-center text-white mt-36 fade-in"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-cinzel mb-6 slide-up">
+          Our Story
+        </h1>
+        <p
+          class="text-xl md:text-2xl max-w-3xl mx-auto slide-up"
+          style="animation-delay: 0.3s"
         >
-          Load More
-        </button>
+          Crafting Excellence in African Fashion Since 2010
+        </p>
       </div>
-    </main>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="py-20 px-4 md:px-8">
+      <div class="max-w-7xl mx-auto">
+        <!-- Vision & Mission -->
+        <div class="grid md:grid-cols-2 gap-12 mb-20 items-center">
+          <div class="slide-in-left">
+            <img
+              src="./assets/2.jpg"
+              alt="Our Vision"
+              class="w-full h-[400px] object-cover rounded-lg shadow-lg mb-6 hover-scale"
+            />
+            <h2 class="text-3xl font-cinzel mb-6">Our Vision</h2>
+            <p class="text-gray-600 leading-relaxed">
+              To be the leading African fashion house, known for our exceptional
+              craftsmanship and innovative designs that celebrate our rich
+              cultural heritage while embracing contemporary style.
+            </p>
+          </div>
+          <div class="slide-in-right">
+            <img
+              src="./assets/4.jpg"
+              alt="Our Mission"
+              class="w-full h-[400px] object-cover rounded-lg shadow-lg mb-6 hover-scale"
+            />
+            <h2 class="text-3xl font-cinzel mb-6">Our Mission</h2>
+            <p class="text-gray-600 leading-relaxed">
+              To create timeless, high-quality garments that empower individuals
+              to express their unique style while preserving and promoting
+              African fashion traditions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="mb-20">
+          <h2 class="text-3xl font-cinzel mb-12 text-center">Our Journey</h2>
+          <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+              <div class="timeline-item slide-up">
+                <h3 class="text-xl font-semibold mb-2">2010</h3>
+                <p class="text-gray-600">
+                  Founded Enayon Sublime Design with a vision to revolutionize
+                  African fashion.
+                </p>
+              </div>
+              <div class="slide-in-right">
+                <img
+                  src="./assets/6.jpg"
+                  alt="2010"
+                  class="w-full h-[300px] object-cover rounded-lg shadow-lg hover-scale"
+                />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+              <div class="slide-in-left order-2 md:order-1">
+                <img
+                  src="./assets/12.jpg"
+                  alt="2015"
+                  class="w-full h-[300px] object-cover rounded-lg shadow-lg hover-scale"
+                />
+              </div>
+              <div class="timeline-item slide-up order-1 md:order-2">
+                <h3 class="text-xl font-semibold mb-2">2015</h3>
+                <p class="text-gray-600">
+                  Expanded our collection to include modern interpretations of
+                  traditional designs.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+              <div class="timeline-item slide-up">
+                <h3 class="text-xl font-semibold mb-2">2020</h3>
+                <p class="text-gray-600">
+                  Launched our flagship store in Badagry, Lagos State.
+                </p>
+              </div>
+              <div class="slide-in-right">
+                <img
+                  src="./assets/19.jpg"
+                  alt="2020"
+                  class="w-full h-[300px] object-cover rounded-lg shadow-lg hover-scale"
+                />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div class="slide-in-left order-2 md:order-1">
+                <img
+                  src="./assets/22.jpg"
+                  alt="2023"
+                  class="w-full h-[300px] object-cover rounded-lg shadow-lg hover-scale"
+                />
+              </div>
+              <div class="timeline-item slide-up order-1 md:order-2">
+                <h3 class="text-xl font-semibold mb-2">2023</h3>
+                <p class="text-gray-600">
+                  Introduced our signature Kaftan and Agbada collections.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-sm hover-scale scale-in">
+            <img
+              src="./assets/28.jpg"
+              alt="Heritage"
+              class="w-full h-[250px] object-cover rounded-lg mb-6 hover-scale"
+            />
+            <h3 class="text-2xl font-cinzel mb-4">Heritage</h3>
+            <p class="text-gray-600">
+              Preserving and celebrating our rich African cultural heritage
+              through contemporary fashion.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-sm hover-scale scale-in"
+            style="animation-delay: 0.2s"
+          >
+            <img
+              src="./assets/1.jpg"
+              alt="Excellence"
+              class="w-full h-[250px] object-cover rounded-lg mb-6 hover-scale"
+            />
+            <h3 class="text-2xl font-cinzel mb-4">Excellence</h3>
+            <p class="text-gray-600">
+              Uncompromising commitment to quality in every stitch and detail of
+              our garments.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-sm hover-scale scale-in"
+            style="animation-delay: 0.4s"
+          >
+            <img
+              src="./assets/2.jpg"
+              alt="Innovation"
+              class="w-full h-[250px] object-cover rounded-lg mb-6 hover-scale"
+            />
+            <h3 class="text-2xl font-cinzel mb-4">Innovation</h3>
+            <p class="text-gray-600">
+              Continuously pushing boundaries to create unique and modern
+              African fashion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="bg-slate-200 py-10 mt-10">
@@ -333,288 +615,7 @@
       </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button
-      id="scroll-to-top"
-      class="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
-      aria-label="Scroll to top"
-    >
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 15l7-7 7 7"
-        ></path>
-      </svg>
-    </button>
-
-    <!-- Order Modal -->
-    <div id="order-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <img
-          id="selected-image"
-          class="selected-image"
-          src=""
-          alt="Selected Kaftan"
-        />
-        <form id="order-form" class="order-form">
-          <div class="form-group">
-            <label for="customer-name">Your Name</label>
-            <input
-              type="text"
-              id="customer-name"
-              required
-              placeholder="Enter your full name"
-            />
-          </div>
-          <div class="form-group">
-            <label for="customer-phone">Phone Number</label>
-            <input
-              type="tel"
-              id="customer-phone"
-              required
-              placeholder="Enter your phone number"
-            />
-          </div>
-          <div class="form-group">
-            <label for="customer-message">Measurements or Message</label>
-            <textarea
-              id="customer-message"
-              required
-              placeholder="Enter your measurements or any specific requirements"
-            ></textarea>
-          </div>
-          <input type="hidden" id="selected-style" />
-          <button type="submit" class="submit-btn">Send to WhatsApp</button>
-        </form>
-      </div>
-    </div>
-
     <!-- JavaScript -->
-    <script>
-      // Scroll to Top Button Functionality
-      const scrollToTopBtn = document.getElementById("scroll-to-top");
-
-      // Show/hide button based on scroll position
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          scrollToTopBtn.classList.remove("hidden");
-        } else {
-          scrollToTopBtn.classList.add("hidden");
-        }
-      });
-
-      // Scroll to top when button is clicked
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-
-      // Function to create and append kaftan items to the grid
-      function createKaftanGrid() {
-        const grid = document.getElementById("kaftan-grid");
-        const loadMoreContainer = document.getElementById(
-          "load-more-container"
-        );
-        const loadMoreBtn = document.getElementById("load-more-btn");
-
-        let imageNumber = 1;
-        const maxAttempts = 200;
-        let isMobile = window.innerWidth < 768; // 768px is the md breakpoint in Tailwind
-        let initialLoadComplete = false;
-        let allImagesLoaded = false;
-
-        // Show load more button only on mobile
-        if (isMobile) {
-          loadMoreContainer.classList.remove("hidden");
-        } else {
-          loadMoreContainer.classList.add("hidden");
-        }
-
-        function addNextImage() {
-          if (imageNumber > maxAttempts || allImagesLoaded) return;
-
-          const img = new Image();
-          img.src = `./assets/${imageNumber}.jpg`;
-
-          img.onload = function () {
-            // Image exists, create the kaftan item
-            const item = document.createElement("div");
-            item.className = "kaftan-item";
-
-            item.innerHTML = `
-                        <img src="${img.src}" alt="Kaftan Design ${imageNumber}" loading="lazy">
-                        <div class="kaftan-overlay">
-                            <button class="inline-block px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors">
-                                Order Now
-                            </button>
-                        </div>
-                    `;
-
-            // Add click event to open modal
-            item.addEventListener("click", () =>
-              openOrderModal({
-                src: img.src,
-                alt: `Kaftan Design ${imageNumber}`,
-                title: `Kaftan Style ${imageNumber}`,
-              })
-            );
-
-            // On mobile, only show first 40 images initially
-            if (isMobile && imageNumber > 40 && !initialLoadComplete) {
-              item.style.display = "none";
-            }
-
-            grid.appendChild(item);
-
-            // Try the next image
-            imageNumber++;
-            addNextImage();
-          };
-
-          img.onerror = function () {
-            // Image doesn't exist, stop trying
-            allImagesLoaded = true;
-            initialLoadComplete = true;
-            // Only hide the button if we're on mobile and have more than 40 images
-            if (isMobile && imageNumber > 40) {
-              loadMoreContainer.classList.remove("hidden");
-            } else {
-              loadMoreContainer.classList.add("hidden");
-            }
-            return;
-          };
-        }
-
-        // Load More button click handler
-        loadMoreBtn.addEventListener("click", () => {
-          const hiddenItems = grid.querySelectorAll(
-            '.kaftan-item[style*="display: none"]'
-          );
-          hiddenItems.forEach((item) => {
-            item.style.display = "";
-          });
-          loadMoreContainer.classList.add("hidden");
-        });
-
-        // Handle window resize
-        window.addEventListener("resize", () => {
-          const wasMobile = isMobile;
-          isMobile = window.innerWidth < 768;
-
-          // If switching between mobile and desktop
-          if (wasMobile !== isMobile) {
-            if (isMobile) {
-              // Switching to mobile
-              const items = grid.querySelectorAll(".kaftan-item");
-              items.forEach((item, index) => {
-                if (index >= 40) {
-                  item.style.display = "none";
-                }
-              });
-              // Show load more button if we have more than 40 images
-              if (items.length > 40) {
-                loadMoreContainer.classList.remove("hidden");
-              }
-            } else {
-              // Switching to desktop
-              const items = grid.querySelectorAll(".kaftan-item");
-              items.forEach((item) => {
-                item.style.display = "";
-              });
-              loadMoreContainer.classList.add("hidden");
-            }
-          }
-        });
-
-        // Start adding images
-        addNextImage();
-      }
-
-      // Modal functionality
-      const modal = document.getElementById("order-modal");
-      const closeBtn = document.querySelector(".close-modal");
-      const form = document.getElementById("order-form");
-      const selectedImage = document.getElementById("selected-image");
-
-      function openOrderModal(kaftan) {
-        selectedImage.src = kaftan.src;
-        selectedImage.alt = kaftan.alt;
-        document.getElementById("selected-style").value = kaftan.title;
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeOrderModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-        form.reset();
-      }
-
-      closeBtn.addEventListener("click", closeOrderModal);
-
-      // Close modal when clicking outside
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          closeOrderModal();
-        }
-      });
-
-      // Handle form submission
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById("customer-name").value;
-        const phone = document.getElementById("customer-phone").value;
-        const message = document.getElementById("customer-message").value;
-        const style = document.getElementById("selected-style").value;
-        const imageUrl = selectedImage.src;
-
-        // Create WhatsApp message
-        const whatsappMessage = `Hello, I'm interested in ordering:\n\nStyle: ${style}\nName: ${name}\nPhone: ${phone}\nMessage: ${message}\n\nImage: ${imageUrl}`;
-
-        // Encode the message for WhatsApp URL
-        const encodedMessage = encodeURIComponent(whatsappMessage);
-
-        // Open WhatsApp with the message
-        window.open(
-          `https://wa.me/2349073466324?text=${encodedMessage}`,
-          "_blank"
-        );
-
-        // Close the modal
-        closeOrderModal();
-      });
-
-      // Initialize the grid when the page loads
-      document.addEventListener("DOMContentLoaded", createKaftanGrid);
-
-      // Mobile menu functionality
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Close mobile menu when clicking outside
-      document.addEventListener("click", (event) => {
-        if (
-          !mobileMenuButton.contains(event.target) &&
-          !mobileMenu.contains(event.target)
-        ) {
-          mobileMenu.classList.add("hidden");
-        }
-      });
-    </script>
+    <script src="./JAVASCRIPT/app.js"></script>
   </body>
 </html>
